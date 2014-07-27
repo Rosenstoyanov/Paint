@@ -2,6 +2,7 @@ package com.hackbulgaria.paint.controller;
 
 import javax.swing.JFrame;
 
+import com.hackbulgaria.paint.tools.Tool;
 import com.hackbulgaria.paint.view.PaintWindow;
 
 public class PaintController {
@@ -12,9 +13,10 @@ public class PaintController {
 		this.window = new PaintWindow();
 		window.setTitle("Paint!");
 		currentTool = Tool.DOT;
+		window.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setFocusable(true);
 		window.setVisible(true);
-		window.setSize(800, 600);
+		//window.setSize(800, 600);
 	}
 }

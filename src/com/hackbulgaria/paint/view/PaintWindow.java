@@ -10,9 +10,7 @@ import javax.swing.JFrame;
 import com.hackbulgaria.paint.sprites.Sprite;
 
 public class PaintWindow extends JFrame {
-	private final List<Sprite> sprites = new ArrayList<>();
-
-	
+	private final List<Sprite> sprites = new ArrayList<>();	
 	
     @Override
     public void paint(Graphics g) {
