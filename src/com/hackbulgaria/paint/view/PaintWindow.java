@@ -21,4 +21,8 @@ public class PaintWindow extends JFrame {
             sprite.draw(g);
         }
     }
+
+	public void addSprite(Sprite sprite) {
+		sprites.add(sprite);
+	}
 }

@@ -1,10 +1,12 @@
 package com.hackbulgaria.paint.controller;
 
+import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JFrame;
 
+import com.hackbulgaria.paint.sprites.DotSprite;
 import com.hackbulgaria.paint.tools.Tool;
 import com.hackbulgaria.paint.view.PaintWindow;
 
@@ -22,15 +24,20 @@ public class PaintController {
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setFocusable(true);
 		window.setVisible(true);
+		// window.paint(g);
 		//window.setSize(800, 600);
 	}
-	
-	
+
 	public class MouseListener extends MouseAdapter{
 		@Override
 		public void mousePressed(MouseEvent e) {
-			System.out.println("Click!");
+			// System.out.println("Click!");
+			DotSprite dotSprite = new DotSprite(e.getX(), e.getY(), Color.white);
+			window.addSprite(dotSprite);
+			window.repaint();
 			super.mousePressed(e);
 		}
+
+
 	}
 }
