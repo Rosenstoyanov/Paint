@@ -1,5 +1,26 @@
 package com.hackbulgaria.paint.view;
 
-public class PaintWindow {
+import java.awt.Color;
+import java.awt.Graphics;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.swing.JFrame;
+
+import com.hackbulgaria.paint.sprites.Sprite;
+
+public class PaintWindow extends JFrame {
+	private final List<Sprite> sprites = new ArrayList<>();
+
+	
+	
+    @Override
+    public void paint(Graphics g) {
+        g.setColor(Color.BLACK); //set color
+        g.fillRect(0, 0, getWidth(), getHeight()); //fill the whole window with black
+
+        for (Sprite sprite : sprites) {
+            sprite.draw(g);
+        }
+    }
 }
