@@ -25,4 +25,11 @@ public class PaintWindow extends JFrame {
 	public void addSprite(Sprite sprite) {
 		sprites.add(sprite);
 	}
+	
+	public void removeSprite(Sprite sprite){
+		if(!sprites.contains(sprite)){
+			System.out.println("Object does not exist");
+		}
+		sprites.remove(sprite);
+	}
 }

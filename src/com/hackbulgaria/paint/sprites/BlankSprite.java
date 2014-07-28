@@ -1,7 +1,9 @@
 package com.hackbulgaria.paint.sprites;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.Toolkit;
 
 public class BlankSprite extends Sprite{
 	@Override
