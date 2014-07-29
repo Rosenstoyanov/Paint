@@ -22,6 +22,12 @@ public class PaintWindow extends JFrame {
         }
     }
 
+	@Override
+	public void update(Graphics g) {
+		// TODO Auto-generated method stub
+		super.update(g);
+	}
+
 	public void addSprite(Sprite sprite) {
 		sprites.add(sprite);
 	}
