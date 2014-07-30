@@ -35,11 +35,11 @@ public class PaintWindow extends JFrame {
 	public void clearWindow() {
 		sprites.clear();
 	}
-	@Override
-	public void update(Graphics g) {
-		// TODO Auto-generated method stub
-		super.update(g);
-	}
+
+	// @Override
+	// public void update(Graphics g) {
+	// super.update(g);
+	// }
 
 	public void addSprite(Sprite sprite) {
 		sprites.add(sprite);

@@ -23,7 +23,7 @@ public class PaintController {
 		window.addMouseListener(mouse);
 		window.addMouseMotionListener(mouse);
 		window.setTitle("Paint!");
-		currentTool = Tool.DOT;
+		currentTool = Tool.SPRAY;
 		window.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setFocusable(true);
