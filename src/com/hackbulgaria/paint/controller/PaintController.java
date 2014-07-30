@@ -7,7 +7,6 @@ import java.awt.event.MouseEvent;
 import javax.swing.JFrame;
 import javax.swing.event.MouseInputAdapter;
 
-import com.hackbulgaria.paint.sprites.BlankSprite;
 import com.hackbulgaria.paint.sprites.DotSprite;
 import com.hackbulgaria.paint.sprites.LineSprite;
 import com.hackbulgaria.paint.sprites.SpraySprite;
@@ -24,7 +23,7 @@ public class PaintController {
 		window.addMouseListener(mouse);
 		window.addMouseMotionListener(mouse);
 		window.setTitle("Paint!");
-		currentTool = Tool.SPRAY;
+		currentTool = Tool.DOT;
 		window.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setFocusable(true);
@@ -48,12 +47,14 @@ public class PaintController {
 				changeTool();
 			}
 			if (e.getButton() == 3) {
-				BlankSprite blank = new BlankSprite();
-				window.addSprite(blank);
+				// BlankSprite blank = new BlankSprite();
+				// window.addSprite(blank);
+				window.clearWindow();
 			}
 			else{
 				if (state == e.MOUSE_CLICKED) {
 					if (currentTool == Tool.DOT) {
+						System.out.println("asdasd");
 						DotSprite dot = new DotSprite(start.x, start.y,
 								Color.green);
 						window.addSprite(dot);
